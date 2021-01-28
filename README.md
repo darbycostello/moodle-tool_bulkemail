@@ -1,6 +1,6 @@
 # Bulk Email admin tool for Moodle 3.9+
 
-This is an admin tool plugin for Moodle 3.9+ which adds an action to bulk user actions, allowing you to send emails to a list of potential users.
+This is an admin tool plugin for Moodle 3.9+ which adds an action to bulk user actions allowing you to send emails to a list of users.
 
 The plugin adds a new "bulkemail:sendbulkemails" capability to the system, mapped to the manager role and site admins by default, which determines if a user can send emails using the feature.
 

@@ -23,7 +23,6 @@
 
 require_once('../../../config.php');
 require_once($CFG->libdir.'/adminlib.php');
-require_once($CFG->dirroot.'/message/lib.php');
 require_once($CFG->dirroot.'/admin/tool/bulkemail/user_email_form.php');
 
 defined('MOODLE_INTERNAL') || die();
@@ -40,10 +39,6 @@ $return = $CFG->wwwroot.'/admin/user/user_bulk.php';
 
 if (empty($SESSION->bulk_users)) {
     redirect($return);
-}
-
-if (empty($CFG->messaging)) {
-    print_error('messagingdisable', 'error');
 }
 
 $supportuser = core_user::get_support_user();
