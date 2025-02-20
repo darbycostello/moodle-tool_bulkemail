@@ -24,7 +24,7 @@
 defined('MOODLE_INTERNAL') || die();
 
 $plugin->component = 'tool_bulkemail';
-$plugin->version = 2021012701;
-$plugin->requires = 2020061500;
+$plugin->version = 2025022000;
+$plugin->requires = 2022112800;
 $plugin->maturity = MATURITY_STABLE;
-$plugin->release = '0.0.4';
+$plugin->release = '0.1.0';
