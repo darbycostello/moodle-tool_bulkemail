@@ -13,20 +13,30 @@
 //
 // You should have received a copy of the GNU General Public License
 // along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
+
 /**
- * @package tool
- * @subpackage bulkemail
- * @author Darby Costello (darby@ghostvoid.com)
- * @copyright 2021 Ghostvoid Ltd
- * @license http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
+ * Privacy Subsystem implementation for tool_bulkemail.
+ *
+ * @package    tool_bulkemail
+ * 
+ * @author     Peter Burnett
+ * @copyright  Catalyst IT 2023
+ * @license    http://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
  */
 
-defined('MOODLE_INTERNAL') || die();
+namespace tool_bulkemail\privacy;
 
-$string['pluginname'] = 'Bulk Email';
-$string['bulkemail'] = 'Send an email';
-$string['bulkemail:sendbulkemails'] = 'Send bulk emails to lists of users';
-$string['confirmmessage'] = 'Do you really want to send the email above to all of these users?<br />{$a}';
-$string['email_from'] = 'Email from {$a}';
-$string['privacy:metadata'] = 'The bulk email tool does not store any user data.';
+class provider implements \core_privacy\local\metadata\null_provider
+{
+    /**
+     * Get the language string identifier with the component's language
+     * file to explain why this plugin stores no data.
+     *
+     * @return string
+     */
+    public static function get_reason(): string
+    {
+        return 'privacy:metadata';
+    }
+}
 
